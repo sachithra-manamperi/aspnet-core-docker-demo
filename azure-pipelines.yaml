@@ -5,11 +5,11 @@ trigger:
 variables:
   buildConfiguration: 'Release'
   location: 'West US 2'
-  acrHostName: 'cswebappdocker004acr.azurecr.io'
-  acrName: 'cswebappdocker004acr'
-  rgName: 'cswebappdocker004-rg'
-  imageName: 'cswebappdocker004'
-  webAppName: 'cswebappdocker004'
+  acrHostName: 'cswebappdocker0041acr.azurecr.io'
+  acrName: 'cswebappdocker0041acr'
+  rgName: 'cswebappdocker0041-rg'
+  imageName: 'cswebappdocker0041'
+  webAppName: 'cswebappdocker0041'
 
 stages:
 
@@ -104,8 +104,7 @@ stages:
 - stage: Staging
   jobs:
   - job: Release
-    pool:
-      vmImage: 'Ubuntu-16.04'
+    pool: myUbuntuAgent
     steps:
     # Don't clone the repo
     - checkout: none
