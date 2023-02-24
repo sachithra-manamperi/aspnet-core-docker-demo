@@ -45,9 +45,8 @@ This stage has the following job:
 
 - `Release`: This job is responsible for deploying the Docker container to the Azure App Service.
 
-#### Steps
+The stage contains the following steps:
+Azure Deployment: Create Azure App Service: This task creates an Azure App Service resource that will host the Docker container.
+Deploy Azure App Service: This task deploys the Docker container image to the Azure App Service.
 
-1. **Don't clone the repo:** This step skips cloning the repository.
-2. **Download the published application artifact:** This step downloads the artifact published in the previous stage.
-3. **Create or update Azure App Service:** This task creates or updates the Azure App Service.
-4. **Deploy App Service:** This task deploys the Docker container to the Azure App Service.
+
