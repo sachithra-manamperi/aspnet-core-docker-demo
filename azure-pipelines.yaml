@@ -17,8 +17,8 @@ stages:
 - stage: BuildAndTest
   jobs:
   - job: BuildAndTest
-    pool:
-      vmImage: 'Ubuntu-16.04'
+    pool: myUbuntuAgent
+
     steps:
 
     # Create or update the ACR resource
