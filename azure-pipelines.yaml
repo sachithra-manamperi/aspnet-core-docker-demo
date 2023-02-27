@@ -89,11 +89,7 @@ stages:
         command: 'Push an image'
         imageName: '$(imageName):$(Build.BuildId)'
 
-    
 
-    # Publish the app as an artifact
-    - publish: $(Build.StagingDirectory)
-      artifact: app
 
 # Staging release
 - stage: Staging
