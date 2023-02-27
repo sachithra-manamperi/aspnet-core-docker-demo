@@ -104,10 +104,6 @@ stages:
     # Don't clone the repo
     - checkout: none
 
-    # Download the published application artifact
-    - download: current
-      artifact: app
-
     # Create or update Azure App Service
     - task: AzureResourceGroupDeployment@2
       displayName: 'Azure Deployment:Create Azure App Service'
