@@ -1,4 +1,18 @@
-# ASP.NET Demo App with YAML CI/CD Pipeline Configuration Edited
+# ASP.NET Demo App with YAML CI/CD Pipeline Configuration 
+
+This pipeline script in Azure DevOps is designed to automate the build and deployment of a containerized web application on Azure. The pipeline has two stages: BuildAndTest and Staging. The pipeline is triggered when changes are made to the master branch.
+
+The pipeline script defines several variables that are used throughout the pipeline, including the build configuration, the Azure location, and the names of various resources that will be created during the deployment.
+
+The BuildAndTest stage is responsible for building the application, running unit tests, and creating a container image. The pipeline uses .NET Core SDK to restore dependencies, build the app, and run tests. The resulting application is published as an artifact, and the container image is pushed to an Azure Container Registry.
+
+The Staging stage deploys the application to an Azure App Service. It downloads the published application artifact and creates or updates the App Service. It deploys the container image to the App Service using AzureRmWebAppDeployment task.
+
+Overall, this pipeline script automates the build and deployment of a containerized web application, making it easier for developers to test and deploy their code to Azure.
+
+
+
+
 
 # Azure DevOps Pipeline Explanation
 
